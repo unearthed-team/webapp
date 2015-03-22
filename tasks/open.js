@@ -6,14 +6,18 @@ var livereload = require('gulp-livereload');
 var opened = false;
 livereload({start: true});
 
-gulp.task('open', ['embedlr'], function(){
-    
+gulp.task('open', ['embedlr'], function() {
+  gulp.src(['./src/**/*'])
+    .pipe(gulp.dest('./tmp'));
+
   if (opened == false) {
-    gulp.src("./tmp/app.html")
+    gulp.src('./tmp/app.html')
       .pipe(open('<%file.path%>'));
     opened = true;
   }
   else {
-    livereload.reload('app.html')
+    setTimeout(function() {
+      livereload.reload('app.html');
+    }, 500);
   }
 });

@@ -8,7 +8,11 @@ gulp.task('buildSync', function(cb) {
   var locals = {};
 
   gulp.src('./src/templates/app.jade')
-    .pipe(jade())
+    .pipe(jade({
+      pretty: true
+    }))
+    /*
+    Switched to cache manifest
     .pipe(smoosher({
       base: 'src'
     }))
@@ -16,7 +20,8 @@ gulp.task('buildSync', function(cb) {
         baseDir: 'src',
         maxSize: 14 * 1024,
         debug: true
-    }))
+        
+    }))*/
     .pipe(rename('app.html'))
     .pipe(gulp.dest('./dist/'))
     .on('end', function() {

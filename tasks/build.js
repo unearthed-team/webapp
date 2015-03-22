@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
-gulp.task('build', ['buildSync'], function() {
-  process.nextTick(function () {
+gulp.task('build', ['buildSync', 'copy'], function() {
+  process.nextTick(function() {
     process.exit(0);
   });
 });
