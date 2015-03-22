@@ -1,0 +1,40 @@
+doctype html
+
+html
+
+  head
+    title Geomantics Field Application
+
+    // Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+    
+    // smoosh
+    link(rel="stylesheet", href="/vendor/bootstrap/3.3.2/css/bootstrap-theme.min.css")
+    link(rel="stylesheet", href="/vendor/bootstrap/3.3.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/vendor/leaflet/0.8-dev/leaflet.css")
+    link(rel="stylesheet", href="/vendor/leaflet.draw/0.2.4-dev/leaflet.draw.css")
+    link(rel="stylesheet", href="/styles/app.css")
+    // endsmoosh
+  body
+    
+    block body
+
+    script(type="text/javascript").
+      var enterprise = 'http://192.168.5.99:1701';
+      var shuttle = 'http://192.168.5.99:17017';
+      var server;
+        
+    // smoosh
+    
+    script(src="/vendor/async/0.2.5/async.min.js")
+    script(src="/vendor/jquery/2.1.3/jquery.min.js")
+    script(src="/vendor/store.js/1.3.17/store.js.min.js")
+    script(src="/vendor/leaflet/0.8-dev/leaflet.js")
+    script(src="/vendor/leaflet.draw/0.2.4-dev/leaflet.draw.js")
+    script(src="/javascript/state.js")
+    script(src="/javascript/vm.js")
+    script(src="/javascript/tiles.js")
+    script(src="/javascript/map.js")
+    script(src="/javascript/zone.js")
+    script(src="/javascript/zone.draw.js")
+    // endsmoosh
